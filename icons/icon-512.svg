@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background rounded square (maskable safe zone = centered 80%) -->
+  <rect width="512" height="512" rx="115" fill="#2563eb"/>
+  <!-- Bulb body -->
+  <path fill="white" d="M256 96c-66.3 0-120 53.7-120 120 0 44.3 23.8 83.2 59.5 104.9V360c0 10.2 8.3 18.5 18.5 18.5h84c10.2 0 18.5-8.3 18.5-18.5v-39.1C352.2 299.2 376 260.3 376 216c0-66.3-53.7-120-120-120z"/>
+  <!-- Base bar 1 -->
+  <rect x="200" y="385" width="112" height="20" rx="10" fill="white"/>
+  <!-- Base bar 2 -->
+  <rect x="212" y="414" width="88" height="20" rx="10" fill="white"/>
+  <!-- Tip -->
+  <path fill="white" d="M234 442h44l-9.5 26a15 15 0 01-25 0z"/>
+</svg>
