@@ -1,33 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/lamp.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="COSIP — Sistema de Gestão de Iluminação Pública" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <title>COSIP — Gestão de Iluminação Pública</title>
-    <!-- GitHub Pages SPA redirect -->
+    <meta charset="utf-8" />
+    <title>COSIP</title>
     <script>
-      (function(){
-        var r = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (r && r !== location.href) {
-          history.replaceState(null, null, r);
-        }
-      })();
+      // SPA redirect for GitHub Pages
+      // Encodes the path into a query param and redirects to index.html
+      var pathSegmentsToKeep = 1; // /Cosip/ = 1 segment
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
-    <script type="module" crossorigin src="/Cosip/assets/index-DUXfKzsw.js"></script>
-    <link rel="modulepreload" crossorigin href="/Cosip/assets/react-vendor-CbehWMLG.js">
-    <link rel="modulepreload" crossorigin href="/Cosip/assets/chart-vendor-v1QShrTN.js">
-    <link rel="modulepreload" crossorigin href="/Cosip/assets/icons-vendor-qPkNpJrm.js">
-    <link rel="modulepreload" crossorigin href="/Cosip/assets/map-vendor-DF21ASbZ.js">
-    <link rel="stylesheet" crossorigin href="/Cosip/assets/index-BAawWXZ8.css">
   </head>
-  <body>
-    <div id="root"></div>
-  </body>
+  <body></body>
 </html>
