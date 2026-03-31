@@ -1,0 +1,93 @@
+# Leiaute de Texto — PDF Conta de Energia (Iluminação Pública)
+# ─────────────────────────────────────────────────────────────────────────────
+# Este arquivo simula o texto extraído de um PDF de fatura IP após pdfToText().
+# Cada concessionária tem diagramação diferente; as expressões regulares do
+# COSIP foram calibradas para reconhecer esta variação.
+#
+# Para testar o extrator no COSIP, converta este texto para PDF usando qualquer
+# editor (Word, LibreOffice, Google Docs → Exportar como PDF).
+# ─────────────────────────────────────────────────────────────────────────────
+
+============================================================
+       ENERGISA MATO GROSSO DISTRIBUIDORA DE ENERGIA S.A.
+       CNPJ: 03.467.321/0001-99
+       AV HISTORIADOR RUBENS DE MENDONÇA 1200
+       CUIABÁ / MT — CEP 78049-913
+============================================================
+
+                        FATURA DE ENERGIA ELÉTRICA
+                     Iluminação Pública — Poder Público
+
+------------------------------------------------------------
+DADOS DO CLIENTE
+------------------------------------------------------------
+Razão Social:    PREFEITURA MUNICIPAL DE CUIABÁ
+CNPJ Cliente:    03.442.729/0001-30
+Endereço:        PRAÇA DA REPÚBLICA S/N — CENTRO — CUIABÁ/MT
+
+------------------------------------------------------------
+DADOS DO FORNECIMENTO
+------------------------------------------------------------
+Unidade Consumidora:   5001119988
+Instalação:            IP-02247
+Referência:            Junho/2024
+Grupo / Subgrupo:      B4a — Convencional
+Tensão Nominal:        220V
+Classe:                Poder Público / Iluminação Pública
+
+------------------------------------------------------------
+LEITURA E CONSUMO
+------------------------------------------------------------
+Leitura Anterior  (15/05/2024):      42.180 kWh
+Leitura Atual     (17/06/2024):      44.320 kWh
+Consumo no período:                   2.140 kWh
+
+------------------------------------------------------------
+COMPOSIÇÃO TARIFÁRIA  (Resolução Homologatória ANEEL 3.215/2024)
+------------------------------------------------------------
+Tarifa de Energia (TE):     R$ 0,47250 / kWh
+Tarifa de Distribuição (TUSD): R$ 0,46830 / kWh
+Tarifa Total (TE+TUSD):     R$ 0,94080 / kWh
+Bandeira Tarifária:         Verde — sem adicional
+
+------------------------------------------------------------
+DEMONSTRATIVO DE VALORES
+------------------------------------------------------------
+Energia Elétrica:           R$  2.013,31
+ICMS (25%):                 R$    671,10
+PIS  (0,65%):               R$     13,09
+COFINS (3,00%):             R$     60,40
+Outros encargos:            R$      0,00
+------------------------------------------------------------
+TOTAL A PAGAR:              R$  2.757,90
+------------------------------------------------------------
+
+Vencimento:  10/07/2024
+Código de barras: 04896.12345 67890.12345 67890.00001 0 00100000275790
+
+------------------------------------------------------------
+POSTOS DE ILUMINAÇÃO
+------------------------------------------------------------
+Quantidade de postes/luminárias:   87
+Potência média instalada:          250 W
+Tipo de lâmpada predominante:      Vapor de Sódio
+Horas de operação estimadas/mês:   360 h
+
+------------------------------------------------------------
+HISTÓRICO DE CONSUMO (kWh)
+------------------------------------------------------------
+Jul/23: 2.050  |  Ago/23: 2.110  |  Set/23: 1.980
+Out/23: 1.990  |  Nov/23: 2.030  |  Dez/23: 2.180
+Jan/24: 2.200  |  Fev/24: 2.150  |  Mar/24: 2.090
+Abr/24: 2.060  |  Mai/24: 2.110  |  Jun/24: 2.140
+
+------------------------------------------------------------
+MENSAGEM DA DISTRIBUIDORA
+------------------------------------------------------------
+Prezado cliente, a Energisa informa que tarifas de energia
+foram reajustadas pela ANEEL a partir de 01/07/2024.
+Para mais informações, acesse: www.energisa.com.br
+
+============================================================
+     Em caso de emergência: 0800 722 7272 (24h gratuito)
+============================================================

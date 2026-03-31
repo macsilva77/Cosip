@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Leiaute XML de Conta de Energia - Iluminação Pública
+  Concessionária: CPFL Paulista / CPFL Piratininga / Energisa
+  Nota: CPFL usa estrutura aninhada diferente do Enel.
+        O extrator do COSIP reconhece ambos os formatos.
+
+  TAG MAPPING  ↔  Enel equivalente:
+    DadosGerais/RazaoSocial    ↔  CONCESSIONARIA
+    DadosGerais/CNPJ           ↔  CNPJ
+    UnidadeConsumidora/Numero  ↔  UC
+    Medicao/leitAnt            ↔  LEITURA_ANTERIOR
+    Medicao/leitAtual          ↔  LEITURA_ATUAL
+    Medicao/consumo            ↔  CONSUMO_KWH
+    Fatura/dtVencimento        ↔  DATA_VENCIMENTO
+    Fatura/vlTotal             ↔  VALOR_TOTAL
+    Tarifas/vlTarifa           ↔  TARIFA_KWH
+-->
+<NotaFiscalFatura versao="3.10">
+
+  <DadosGerais>
+    <RazaoSocial>CPFL Energia Elétrica S.A.</RazaoSocial>
+    <CNPJ>08.439.659/0001-50</CNPJ>
+    <Agencia>SP</Agencia>
+    <CodigoEmpresa>21</CodigoEmpresa>
+  </DadosGerais>
+
+  <Cliente>
+    <Nome>PREFEITURA MUNICIPAL DE RIBEIRAO PRETO</Nome>
+    <CnpjCliente>56.022.719/0001-38</CnpjCliente>
+    <EnderecoCobranca>RUA ALVARES CABRAL 600 - CENTRO - RIBEIRAO PRETO SP 14010-020</EnderecoCobranca>
+  </Cliente>
+
+  <UnidadeConsumidora>
+    <Numero>3001987654</Numero>
+    <NumInstalacao>IP-01837</NumInstalacao>
+    <Endereco>RUA XV DE NOVEMBRO 250 CENTRO RIBEIRAO PRETO SP</Endereco>
+    <Classe>Poder Publico</Classe>
+    <Subclasse>Iluminacao Publica</Subclasse>
+    <Modalidade>Convencional</Modalidade>
+    <TensaoNominal>220V</TensaoNominal>
+    <Grupo>B4a</Grupo>
+  </UnidadeConsumidora>
+
+  <Fatura>
+    <mesRef>04/2024</mesRef>
+    <dtEmissao>18/04/2024</dtEmissao>
+    <dtVencimento>10/05/2024</dtVencimento>
+    <!-- Status calculado na data atual: vencida há ~325 dias (em 31/03/2026) -->
+  </Fatura>
+
+  <Medicao>
+    <codMedidor>98765432</codMedidor>
+    <dtLeitAnt>19/03/2024</dtLeitAnt>
+    <dtLeitAtual>18/04/2024</dtLeitAtual>
+    <leitAnt>18340</leitAnt>
+    <leitAtual>20155</leitAtual>
+    <fatorMult>1</fatorMult>
+    <consumo>1815</consumo>
+    <unidade>kWh</unidade>
+  </Medicao>
+
+  <Tarifas>
+    <!-- Homologação ANEEL — Resolução Homologação 3.092/2024 -->
+    <vlTE>0.42100</vlTE>        <!-- Tarifa de Energia -->
+    <vlTUSD>0.40980</vlTUSD>   <!-- Tarifa Distribuição -->
+    <vlTarifa>0.83080</vlTarifa>
+    <bandeira>Verde</bandeira>
+    <adicBandeira>0.00000</adicBandeira>
+  </Tarifas>
+
+  <Valores>
+    <vlEnergia>1507.90</vlEnergia>
+    <vlICMS>272.10</vlICMS>
+    <vlPIS>56.27</vlPIS>
+    <vlCOFINS>101.53</vlCOFINS>
+    <vlJuros>0.00</vlJuros>
+    <vlMulta>0.00</vlMulta>
+    <vlTotal>1937.80</vlTotal>
+  </Valores>
+
+  <IluminacaoPublica>
+    <numPostes>62</numPostes>
+    <potenciaMediaW>250</potenciaMediaW>
+    <tipoLampada>Vapor de Sodio</tipoLampada>
+    <horasOperacao>360</horasOperacao>
+  </IluminacaoPublica>
+
+</NotaFiscalFatura>

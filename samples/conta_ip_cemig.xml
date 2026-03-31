@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Leiaute XML de Conta de Energia - Iluminação Pública
+  Concessionária: CEMIG Distribuição S.A. (Minas Gerais)
+  Formato: Exportação direta do sistema de faturamento CEMIG (SAP IS-U)
+
+  Diferenças em relação a Enel/CPFL:
+  - Usa <nfe> / <infNF> como envelope
+  - Data no formato AAAA-MM-DD (ISO 8601)
+  - Consumo separado em ponta e fora-ponta
+-->
+<nfe versao="4.00">
+  <infNF>
+
+    <emit>
+      <CNPJ>17.155.730/0001-64</CNPJ>
+      <xNome>CEMIG Distribuicao S.A.</xNome>
+      <xFant>CEMIG D</xFant>
+      <enderEmit>
+        <xLgr>AV BARBACENA</xLgr>
+        <nro>1200</nro>
+        <xBairro>SANTO AGOSTINHO</xBairro>
+        <xMun>BELO HORIZONTE</xMun>
+        <UF>MG</UF>
+        <CEP>30190-131</CEP>
+      </enderEmit>
+    </emit>
+
+    <dest>
+      <CNPJ>18.715.128/0001-70</CNPJ>
+      <xNome>PREFEITURA MUNICIPAL DE UBERLANDIA</xNome>
+      <enderDest>
+        <xLgr>AV FLORIANO PEIXOTO</xLgr>
+        <nro>3400</nro>
+        <xBairro>BRASIL</xBairro>
+        <xMun>UBERLANDIA</xMun>
+        <UF>MG</UF>
+        <CEP>38400-104</CEP>
+      </enderDest>
+    </dest>
+
+    <fatura>
+      <!-- NumUC e NumInstalacao identificam a UC no sistema CEMIG -->
+      <NumUC>8005512233</NumUC>
+      <NumInstalacao>IP-08841</NumInstalacao>
+      <MesReferencia>Marco/2024</MesReferencia>
+      <!-- Formato ISO aqui — o extrator COSIP converte para DD/MM/AAAA -->
+      <DataEmissao>2024-03-20</DataEmissao>
+      <DataVencimento>2024-04-15</DataVencimento>
+      <ClasseConsumo>Poder Publico - Iluminacao Publica</ClasseConsumo>
+      <Modalidade>Convencional</Modalidade>
+      <TensaoNominal>220V</TensaoNominal>
+    </fatura>
+
+    <medicao>
+      <LeituraAnterior>31200</LeituraAnterior>
+      <LeituraAtual>33045</LeituraAtual>
+      <!-- CEMIG detalha ponta e fora-ponta -->
+      <ConsumoPonta>310</ConsumoPonta>
+      <ConsumoForaPonta>1535</ConsumoForaPonta>
+      <Consumo>1845</Consumo>
+      <UnidMed>kWh</UnidMed>
+    </medicao>
+
+    <tarifas>
+      <!-- Tarifas homologadas ANEEL — Despacho 3.120/2024 -->
+      <TarifaTE>0.44285</TarifaTE>
+      <TarifaTUSD>0.43101</TarifaTUSD>
+      <TarifaKWH>0.87386</TarifaKWH>
+      <Bandeira>Amarela</Bandeira>
+      <AdicionalBandeira>0.01874</AdicionalBandeira>
+    </tarifas>
+
+    <icms>
+      <Aliquota>18.00</Aliquota>
+      <BaseCalculo>1723.52</BaseCalculo>
+      <Valor>310.23</Valor>
+    </icms>
+
+    <pis>
+      <Aliquota>0.65</Aliquota>
+      <Valor>11.68</Valor>
+    </pis>
+
+    <cofins>
+      <Aliquota>3.00</Aliquota>
+      <Valor>53.90</Valor>
+    </cofins>
+
+    <total>
+      <vEnergia>1611.27</vEnergia>
+      <vICMS>310.23</vICMS>
+      <vPIS>11.68</vPIS>
+      <vCOFINS>53.90</vCOFINS>
+      <vOutros>0.00</vOutros>
+      <vNF>1986.08</vNF>    <!-- campo usado pelo extrator COSIP como ValorTotal -->
+    </total>
+
+    <iluminacaoPublica>
+      <NumPostes>55</NumPostes>
+      <PotenciaMediaW>400</PotenciaMediaW>
+      <TipoLampada>Vapor de Mercurio</TipoLampada>
+      <FatorPotencia>0.90</FatorPotencia>
+    </iluminacaoPublica>
+
+  </infNF>
+</nfe>
